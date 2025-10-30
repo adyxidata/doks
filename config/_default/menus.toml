@@ -1,5 +1,0 @@
-# Hugo expects [menus] table with arrays under language-specific or global scope
-[menus]
-  main = [
-    { identifier = "blog", name = "Blog", url = "/blog/", weight = 10 }
-  ]
