@@ -1,6 +1,4 @@
-[menu]
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/blog/"
-    weight = 10
+[menus]
+  main = [
+    { identifier = "blog", name = "Blog", url = "/blog/", weight = 10 }
+  ]
