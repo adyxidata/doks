@@ -1,0 +1,26 @@
+baseURL = "/"
+languageCode = "en"
+title = ""
+theme = "doks"
+defaultContentLanguage = "en"
+# Disable homepage list rendering
+disableKinds = ["home", "taxonomy", "term", "section", "RSS"]
+
+[params]
+  # UI minimization
+  search = false
+  showEditPage = false
+  showLastMod = false
+  showSidebar = false
+  showBreadcrumbs = false
+  showNavbar = true
+  showFooter = false
+  # Theme toggle
+  colorMode = "auto"
+  showThemeToggle = true
+
+[outputs]
+  home = ["HTML"]
+
+[permalinks]
+  blog = "/blog/:slug/"
