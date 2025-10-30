@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en"
 title = ""
-theme = "doks"
+# theme = "doks"  # Disabled: using Hugo Modules mounts instead
 defaultContentLanguage = "en"
 # Disable homepage list rendering
 disableKinds = ["home", "taxonomy", "term", "section", "RSS"]
