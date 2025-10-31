@@ -7,8 +7,6 @@ date: 2025-10-31T02:00:00+03:00
 lastmod: 2025-10-31T02:00:00+03:00
 draft: false
 weight: 50
-categories: ["Таро", "Анализ"]
-tags: ["Андрей", "Екатерина", "анонимный чат"]
 contributors: []
 pinned: false
 homepage: false
