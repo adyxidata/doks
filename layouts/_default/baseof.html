@@ -16,13 +16,19 @@
     {{ else }}{{ with .Params.summary }}
     <meta name="description" content="{{ . }}">
     {{ end }}{{ end }}
-    
-    <!-- Theme CSS -->
-    {{ $css := resources.Get "css/main.css" }}
-    {{ if hugo.IsProduction }}
-        {{ $css = $css | minify | fingerprint }}
+
+    <!-- Optional: robots from frontmatter -->
+    {{ if or (eq .Params.seo.noindex true) (eq .Params.noindex true) }}
+    <meta name="robots" content="noindex, nofollow">
+    {{ else }}
+    <meta name="robots" content="index, follow">
     {{ end }}
+
+    <!-- Theme CSS (no minify to avoid ResourceTransformer error) -->
+    {{ $css := resources.Get "css/main.css" }}
+    {{ if $css }}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
+    {{ end }}
 </head>
 <body>
     {{ block "main" . }}{{ end }}
