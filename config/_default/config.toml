@@ -3,19 +3,17 @@ languageCode = "en"
 title = ""
 # theme = "doks"  # Disabled: using Hugo Modules mounts instead
 defaultContentLanguage = "en"
-# Disable kinds: keep section enabled so /blog/ and posts are generated
-disableKinds = ["home", "taxonomy", "term", "RSS"]
+# Hide sections (no /blog/ list), keep single pages accessible by direct URL
+disableKinds = ["home", "taxonomy", "term", "section", "RSS"]
 
 [params]
-  # UI minimization
   search = false
   showEditPage = false
   showLastMod = false
   showSidebar = false
   showBreadcrumbs = false
-  showNavbar = true
+  showNavbar = false
   showFooter = false
-  # Theme toggle
   colorMode = "auto"
   showThemeToggle = true
 
