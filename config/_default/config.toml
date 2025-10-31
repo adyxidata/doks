@@ -3,8 +3,8 @@ languageCode = "en"
 title = ""
 # theme = "doks"  # Disabled: using Hugo Modules mounts instead
 defaultContentLanguage = "en"
-# Disable homepage list rendering
-disableKinds = ["home", "taxonomy", "term", "section", "RSS"]
+# Disable kinds: keep section enabled so /blog/ and posts are generated
+disableKinds = ["home", "taxonomy", "term", "RSS"]
 
 [params]
   # UI minimization
