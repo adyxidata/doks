@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO meta tags -->
+    {{ partial "seo-meta.html" . }}
+    
+    <!-- Title -->
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    
+    <!-- Description -->
+    {{ with .Params.description }}
+    <meta name="description" content="{{ . }}">
+    {{ else }}{{ with .Params.summary }}
+    <meta name="description" content="{{ . }}">
+    {{ end }}{{ end }}
+    
+    <!-- Theme CSS -->
+    {{ $css := resources.Get "css/main.css" }}
+    {{ if hugo.IsProduction }}
+        {{ $css = $css | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}">
+</head>
+<body>
+    {{ block "main" . }}{{ end }}
+</body>
+</html>
