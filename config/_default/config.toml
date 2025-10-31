@@ -1,9 +1,7 @@
 baseURL = "/"
-languageCode = "en"
-title = ""
-# theme = "doks"  # Disabled: using Hugo Modules mounts instead
+languageCode = "ru"
+title = "Таро Расклад"
 defaultContentLanguage = "en"
-# Hide sections (no /blog/ list), keep single pages accessible by direct URL
 disableKinds = ["home", "taxonomy", "term", "section", "RSS"]
 
 [params]
