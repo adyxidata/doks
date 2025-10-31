@@ -1,7 +1,5 @@
-{{ with .Site.Params.seo.title }}
+{{ with .Site.Title }}
 <meta property="og:site_name" content="{{ . }}">
-{{ else }}
-<meta property="og:site_name" content="{{ .Site.Title }}">
 {{ end }}
 
 {{ with .Title }}
